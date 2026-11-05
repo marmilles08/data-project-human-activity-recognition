@@ -2,20 +2,15 @@
 
 ## About the project
 
-This project takes data from the UCI HAR Dataset (accelerometer and gyroscope measurements from a smartphone, recorded for 30 volunteers who performed 6 activities) and, with an R script, obtains the average of the mean and standard deviation measurements for each subject and each activity. The variable names are also improved so that they are more descriptive. The original data files were merged by position, because they do not share a common column.
+The project consisted of writing R code that takes a subset of data from several data sets to find the grouped averages (by individuals and by activities), improving the descriptions of the variable names. The code is provided, along with its result and a CodeBook that explains which transformations were made with respect to the original source. The data sets were merged by position because they have no column in common.
 
 ## Files in this repository
 
-- `run_analysis.R`: script that downloads the data, transforms it and produces the result.
-- `tidy_data.txt`: tidy data set with the averages by subject and activity (180 rows and 68 columns).
-- `CodeBook.md`: describes the data, the variables and the transformations made with respect to the original source.
+`run_analysis.R` is the code, `tidy_data.txt` is the result, `CodeBook.md` is where the transformations that were made can be seen and where the handling of the data and what the script does are explained in more detail, and `README.md` explains what the whole project consists of and how to run it.
 
-## How to run the script
+## How to run it
 
-1. Have R installed, along with the `dplyr` package. It is installed once with `install.packages("dplyr")`.
-2. Download `run_analysis.R` into a folder and set that folder as the working directory in R.
-3. Run `source("run_analysis.R")`. The first time, the script downloads and unzips the original data (an internet connection is required).
-4. When it finishes, `tidy_data.txt` is created in the same folder. It can be read with `read.table("tidy_data.txt", header = TRUE)`.
+The `dplyr` package is needed.
 
 ## Source of the data
 
